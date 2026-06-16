@@ -9,6 +9,7 @@ const badgeVariants = cva(
         default: "border-zinc-700 bg-zinc-900 text-zinc-300",
         success: "border-emerald-800/50 bg-emerald-950/50 text-emerald-400",
         warning: "border-amber-800/50 bg-amber-950/50 text-amber-400",
+        destructive: "border-red-800/50 bg-red-950/50 text-red-400",
       },
     },
     defaultVariants: { variant: "default" },

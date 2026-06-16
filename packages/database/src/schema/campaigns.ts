@@ -1,4 +1,4 @@
-import { jsonb, pgEnum, pgTable, uuid, varchar } from "drizzle-orm/pg-core";
+import { jsonb, pgEnum, pgTable, text, uuid, varchar } from "drizzle-orm/pg-core";
 import { id, timestamps } from "./helpers.js";
 import { offers } from "./offers.js";
 import { organizations } from "./organizations.js";
@@ -36,6 +36,11 @@ export const campaigns = pgTable("campaigns", {
   hooks: jsonb("hooks"),
   creatives: jsonb("creatives"),
   variations: jsonb("variations"),
+  campaignName: text("campaign_name"),
+  objective: jsonb("objective").$type<{ objective: string }>(),
+  audiences: jsonb("audiences").$type<Array<{ name: string; reason: string }>>(),
+  interests: jsonb("interests").$type<string[]>(),
+  adSets: jsonb("ad_sets").$type<Array<{ name: string; focus: string }>>(),
   ...timestamps,
 });
 

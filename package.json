@@ -17,5 +17,8 @@
   "packageManager": "pnpm@9.15.4",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
   }
 }
